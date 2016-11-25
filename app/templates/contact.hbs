@@ -1,3 +1,28 @@
+{{#if responseMessage}}
+	<div class="alert alert-success">{{responseMessage}}<i class="pull-right" {{action 'closeAlert'}}>x</i></div>
+{{/if}}
 <div class="container">
-	<h1>Contact</h1>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4>Contact Me</h4>
+				</div>
+				<div class="panel-body">
+					<div class="form-group">
+						{{input type="email" name="name" value=emailAddress class="form-control" placeholder="email address"}}
+					</div>
+					<div class="form-group">
+						{{textarea class="form-control" placeholder="Your message. (At least 5 characters.)" rows="7" value=message}}
+					</div>
+				</div>
+				<div class="panel-footer">
+					<button type="button" name="button" class="btn btn-lg btn-primary" {{action 'sendMessage'}} disabled={{unless isValid 'disabled	'}}>Send</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
