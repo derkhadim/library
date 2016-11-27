@@ -1,0 +1,19 @@
+<div class="container">
+
+  <h1>Messages saved</h1>
+
+  {{#each model as |contact|}}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4>{{contact.email}}</h4>
+    </div>
+    <div class="panel-body">
+      {{contact.message}}
+    </div>
+    <div class="panel-footer">
+      <button type="button" name="button" class="btn btn-primary">Actions</button>
+    </div>
+  </div>
+  {{/each}}
+
+</div>
