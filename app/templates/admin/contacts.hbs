@@ -11,7 +11,7 @@
       {{contact.message}}
     </div>
     <div class="panel-footer">
-      <button type="button" name="button" class="btn btn-primary">Actions</button>
+      <button type="button" name="button" class="btn btn-danger" {{action 'deleteMessage' contact}}>Delete</button>
     </div>
   </div>
   {{/each}}
